@@ -1,0 +1,54 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav class="sideNaveClr" opened="true" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+          fixedTopGap="56">
+          <h1 class="example-app-name imgBackground border0-5 text-center">
+              <img src="../../assets/StuditLogo.png" alt="" class="logoSize margin-top-6">
+          </h1>
+
+          <mat-nav-list class="liPadding">
+              <a mat-list-item routerLink="/dashboard/maindashboard" routerLinkActive="active-list-item" class="menu-margin">
+                  <h2 matLine>Dashboard</h2>
+                  <mat-icon matListIcon>dashboard</mat-icon>
+              </a>
+              <a mat-list-item routerLink="/dashboard/student" routerLinkActive="active-list-item" class="menu-margin">
+                  <h2 matLine>Student</h2>
+                  <mat-icon matListIcon>school</mat-icon>
+              </a>
+              <a mat-list-item routerLink="/dashboard/teacher" routerLinkActive="active-list-item" class="menu-margin">
+                  <h2 matLine>Teacher</h2>
+                  <mat-icon matListIcon>supervisor_account
+                  </mat-icon>
+              </a>
+              <a mat-list-item routerLink="/dashboard/courses" routerLinkActive="active-list-item" class="menu-margin">
+                  <h2 matLine>Courses</h2>
+                  <mat-icon matListIcon>auto_stories
+                  </mat-icon>
+              </a>
+        
+          </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+          <mat-toolbar color="primary" class="example-toolbar">
+              <button mat-icon-button (click)="snav.toggle()">
+                  <mat-icon class="menuHeadingFont">menu</mat-icon>
+              </button>
+              <h1 class="example-app-name menuHeadingFont">Dashboard</h1>
+              <form class="example-form width100">
+              </form>
+              <!-- <mat-icon matBadge="5" matBadgeColor="warn" class="margin-22 cursorPointer menuHeadingFont margin-top-12" >notifications</mat-icon> -->
+              <mat-icon aria-hidden="false" class="margin-50 cursorPointer menuHeadingFont margin-top-12"  
+              [matMenuTriggerFor]="menu">person</mat-icon>
+              <mat-menu #menu="matMenu">
+                  <!-- <button mat-menu-item><mat-icon aria-hidden="false">person</mat-icon>{{userName}}</button> -->
+                  <button mat-menu-item><mat-icon aria-hidden="false">lock_open</mat-icon>&nbsp;&nbsp;Change Password</button>
+                  <button mat-menu-item (click)="logout()"><mat-icon aria-hidden="false" >exit_to_app</mat-icon>&nbsp;&nbsp;Log Out</button>
+              </mat-menu>
+          </mat-toolbar>
+          <div class="padding-25-64">
+              <router-outlet></router-outlet>
+          </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

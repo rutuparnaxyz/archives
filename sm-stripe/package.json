@@ -1,0 +1,12 @@
+{
+  "name": "payment",
+  "version": "0.0.1",
+  "dependencies": {
+    "@google-cloud/pubsub": "^2.5.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4",
+    "shortid": "^2.2.15",
+    "stripe": "^8.91.0"
+  }
+}

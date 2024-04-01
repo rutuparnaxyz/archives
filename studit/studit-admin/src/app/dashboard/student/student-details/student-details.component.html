@@ -1,0 +1,135 @@
+<div class="campaign-details-div">
+    <div class="container-fluid">
+  
+      <div class="col-md-12">
+        <div class="card">
+  
+          <div class="card-header campaign-card-header">
+            <h4 class="card-title">Student Details</h4>
+          </div>
+          <div class="card-body">
+            <form #newsupplier="ngForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="group bmd-form-group">First Name</label>
+                  <input type="text" class="form-control" name="first_name"
+                    id="first_name"  required>
+                  <!-- <mat-error *ngIf="first_name.invalid && first_name.touched">First Name Can't be Empty</mat-error> -->
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating">Last Name</label>
+                    <input type="text"  class="form-control" [(ngModel)]="studentDetails.last_name"
+                      name="last_name" id="last_name" #last_name="ngModel">
+                    <!-- <mat-error *ngIf="last_name.invalid && last_name.touched">Last Name Can't be Empty</mat-error> -->
+  
+                  </div>
+                </div>
+  
+              </div>
+           
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating">Email</label>
+                    <input required class="form-control" type="email" 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      [(ngModel)]="studentDetails.email" name="email"  
+                      id="email" #email="ngModel">
+  
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                      <mat-error *ngIf="email.errors.required"> Email is required</mat-error>
+                      <mat-error *ngIf="email.errors.pattern">Please Enter a Valid Email </mat-error>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group bmd-form-group">
+                      <label class="bmd-label-floating">Email</label>
+                      <input required class="form-control" type="email" 
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        [(ngModel)]="studentDetails.email" name="email"  
+                        id="email" #email="ngModel">
+    
+                      <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <mat-error *ngIf="email.errors.required"> Email is required</mat-error>
+                        <mat-error *ngIf="email.errors.pattern">Please Enter a Valid Email </mat-error>
+                      </div>
+    
+                    </div>
+                  </div>
+             
+              
+              </div>
+          
+  
+
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group bmd-form-group">                     
+                            <label class="bmd-label-floating">Primary Contact Number</label>
+                            <input class="form-control" type="text" pattern="\d*" required
+                              [(ngModel)]="studentDetails.primary_contact_number" name="primary_contact_number" 
+                              id="primary_contact_number"
+                              #primary_contact_number="ngModel" minlength="10" maxlength="10">               
+      
+                        <div *ngIf="primary_contact_number.invalid && (primary_contact_number.dirty || primary_contact_number.touched)">
+                          <mat-error *ngIf="primary_contact_number.errors.required"> Contact Number is required</mat-error>
+                          <mat-error *ngIf="primary_contact_number.errors.pattern">Numbers only </mat-error>
+                          <mat-error *ngIf="primary_contact_number.errors.minlength && !primary_contact_number.errors.pattern">Length can't be
+                            Less than 10 </mat-error>
+                        </div>        
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group bmd-form-group">                     
+                        <label class="bmd-label-floating">Secondary Contact Number</label>
+                        <input class="form-control" type="text" pattern="\d*" 
+                          [(ngModel)]="studentDetails.secondary_contact_number" name="secondary_contact_number" id="secondary_contact_number"
+                          #secondary_contact_number="ngModel" minlength="10" maxlength="10">               
+  
+                    <div *ngIf="secondary_contact_number.invalid && (secondary_contact_number.dirty || secondary_contact_number.touched)">
+                      <mat-error *ngIf="secondary_contact_number.errors.pattern">Numbers only </mat-error>
+                      <mat-error *ngIf="secondary_contact_number.errors.minlength && !secondary_contact_number.errors.pattern">Length can't be
+                        Less than 10 </mat-error>
+                    </div>        
+                  </div>                    
+                  </div>              
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating">Primary Address</label>
+                    <textarea class="form-control" [(ngModel)]="studentDetails.primary_address" name="primary_address" required
+                      id="primary_address" #primary_address="ngModel"></textarea>
+                    <mat-error *ngIf="primary_address.invalid && primary_address.touched">Primary address Can't be Empty</mat-error>
+  
+                  </div>
+                </div>               
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating">Secondary Address</label>
+                    <textarea class="form-control" [(ngModel)]="studentDetails.secondary_address"
+                     name="secondary_address" 
+                      id="secondary_address" #secondary_address="ngModel"></textarea>
+                    <!-- <mat-error *ngIf="secondary_address.invalid && secondary_address.touched">address Can't be Empty</mat-error> -->
+  
+                  </div>
+                </div>               
+              </div>
+              <button  type="submit" mat-raised-button class="login100-form-btn" [disabled]="newsupplier.invalid" 
+              >Update</button>
+            </form>
+        
+           
+        </div>
+       
+      </div>
+  
+    </div>
+  </div>

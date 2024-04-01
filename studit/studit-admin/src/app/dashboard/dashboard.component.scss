@@ -1,0 +1,136 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+.mat-badge-medium .mat-badge-content {
+  width: 18px !important;
+  height: 18px!important;
+  line-height: 19px!important;
+}
+.mat-toolbar.mat-primary {
+background: rgba(63, 81, 181, 0) !important;
+color: #3c3c3c !important;
+}
+
+.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+right: -9px !important;
+}
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.logoSize{
+  width: 100px;
+}
+
+.padding-25-64{
+  padding: 25px 15px 25px 0px;
+}
+.margin-top-6{
+  margin: 5px 0px 5px 0px;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 70px !important;
+}
+
+.sideNaveClr{
+background-image: url(/assets/images/sidebar-4.jpg);
+  margin: 0px 0px 0px 1px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  /* background-size: 100% auto; */
+  background-position:  bottom;
+  /* background-attachment: fixed; */
+  background-color: #dbd7d6;
+}
+.imgBackground{
+  margin: 0px;
+  margin-left: 0px !important;
+  padding: 12px 0px 0px 0px;
+}
+
+.mat-drawer-inner-container{
+background-color: #e1dfdf63 !important;
+}
+
+.active-list-item {
+background-color: #1fbdc1 !important;
+box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px hsl(181deg 72% 44% / 53%);
+color: white !important;
+border-radius: 3px;
+}
+.liPadding{
+//padding: 8px 12px;
+}
+
+.mat-list-base .mat-list-item {
+color: #3c4858;
+margin: 12px 0px;
+}
+
+.border0-5{
+border-bottom: 0.5px solid #cdcdcd;
+}
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+background-color: #ffffff !important;
+color: #414141 !important;
+}
+.width100{
+width: 100%;
+}
+
+.floatRight{
+float: right;
+}
+.margin-top-17{
+margin-top: 19px;
+}
+
+.margin-22{
+margin: 0px 22px;
+}
+button:focus {
+outline: none !important;
+}
+
+.cursorPointer{
+cursor: pointer;
+}
+
+.menuHeadingFont{
+font-weight: 200;
+  font-size: 18px;
+}
+.mat-mini-fab {
+width: 34px;
+height: 34px;
+}
+
+.margin-top-12{
+margin-top: 12px;
+}
+
